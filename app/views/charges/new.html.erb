@@ -1,24 +1,22 @@
-<div class="wrapper">
-  <div class="container">
-    <h1 id="main">Checkout:</h1>
-    <%= image_tag("http://i.imgur.com/zV1TbQl.png", alt: "book cover", class: "img-responsive") %>
-    <%= form_tag charges_path do %>
-      <article>
-        <% if flash[:error].present? %>
-          <div id="error_explanation">
-            <p><%= flash[:error] %></p>
-          </div>
-        <% end %>
-        <label class="amount">
-          <span>Amount: $19.99</span>
-        </label>
-      </article>
+<div class="container">
+  <h1 id="main">Checkout:</h1>
+  <%= image_tag("http://i.imgur.com/zV1TbQl.png", alt: "book cover", class: "img-responsive") %>
+  <%= form_tag charges_path do %>
+    <article>
+      <% if flash[:error].present? %>
+        <div id="error_explanation">
+          <p><%= flash[:error] %></p>
+        </div>
+      <% end %>
+      <label class="amount">
+        <span>Amount: $19.99</span>
+      </label>
+    </article>
 
-      <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-              data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-              data-description="The ultimate powerlifting program"
-              data-amount="1999"
-              data-locale="auto"></script>
-    <% end %>
-  </div>
+    <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+            data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+            data-description="The ultimate powerlifting program"
+            data-amount="1999"
+            data-locale="auto"></script>
+  <% end %>
 </div>

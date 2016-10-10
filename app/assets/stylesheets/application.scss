@@ -27,23 +27,22 @@ html, body {
   overflow: none;
 }
 
-.wrapper {
+.container {
   padding: 0;
   margin: 0 auto;
   background: white;
   width: 70%;
-  height: 100%;
-  .container {
-    text-align: center;
-    a {
-      font-size: 1.6em;
-    }
-    img {
-      margin: 0 auto;
-      width: 800px;
-    }
+
+  text-align: center;
+  a {
+    font-size: 1.6em;
+  }
+  img {
+    margin: 0 auto;
+    width: 800px;
   }
 }
+
 
 #main {
   margin-top: 250px;
